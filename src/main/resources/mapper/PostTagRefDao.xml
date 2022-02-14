@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.dao.PostTagRefDao">
+
+    <resultMap type="com.example.blog.entity.PostTagRef" id="PostTagRefMap">
+        <result property="postId" column="post_id" jdbcType="INTEGER"/>
+        <result property="tagId" column="tag_id" jdbcType="INTEGER"/>
+        <result property="id" column="id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="findTagIdByPostIds" resultType="java.lang.Long">
+        SELECT tag_id FROM post_tag_ref
+        <where>
+            post_id IN
+            <foreach collection="postIds" item="item" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </where>
+    </select>
+
+    <select id="findTop10PostByTagId" resultType="com.example.blog.entity.Post">
+        SELECT
+            p.*
+        FROM post p, post_tag_ref r
+        WHERE r.tag_id = #{tagId}  AND r.post_id = p.id
+        ORDER BY p.post_views DESC
+        limit 10
+    </select>
+
+
+</mapper>

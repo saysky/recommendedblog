@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.dao.PostDao">
+
+    <resultMap type="com.example.blog.entity.Post" id="PostMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="postContent" column="post_content" jdbcType="OTHER"/>
+        <result property="postStatus" column="post_status" jdbcType="INTEGER"/>
+        <result property="postSummary" column="post_summary" jdbcType="VARCHAR"/>
+        <result property="postThumbnail" column="post_thumbnail" jdbcType="VARCHAR"/>
+        <result property="postTitle" column="post_title" jdbcType="VARCHAR"/>
+        <result property="postViews" column="post_views" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="findByCategoryId" resultMap="PostMap">
+        SELECT
+        p.*
+        FROM
+        post p,
+        category c,
+        post_category_ref r
+        <where>
+            p.post_status = 1 AND
+            r.cate_id = c.id AND
+            r.post_id = p.id AND
+            c.id = #{categoryId}
+            <if test="keywords != null and keywords != ''">
+                AND (p.post_title LIKE CONCAT('%', #{keywords}, '%') OR
+                p.post_content LIKE CONCAT('%', #{keywords}, '%'))
+            </if>
+        </where>
+    </select>
+
+    <select id="findByTagId" resultMap="PostMap">
+        SELECT
+        p.*
+        FROM
+        post p,
+        tag c,
+        post_tag_ref r
+        <where>
+            p.post_status = 1 AND
+            r.tag_id = c.id AND
+            r.post_id = p.id AND
+            c.id = #{tagId}
+            <if test="keywords != null and keywords != ''">
+                AND (p.post_title LIKE CONCAT('%', #{keywords}, '%') OR
+                p.post_content LIKE CONCAT('%', #{keywords}, '%'))
+            </if>
+        </where>
+    </select>
+
+    <select id="findByTagIds" resultMap="PostMap">
+        SELECT
+        p.*
+        FROM
+        post p,
+        tag c,
+        post_tag_ref r
+        <where>
+            p.post_status = 1 AND
+            r.tag_id = c.id AND
+            r.post_id = p.id
+            <if test="tagIds != null and tagIds.size() > 0">
+                AND c.id IN
+                <foreach collection="tagIds" item="item" separator="," open="(" close=")">
+                     #{item}
+                </foreach>
+            </if>
+            <if test="excludePostIds != null and excludePostIds.size() > 0">
+                AND p.id NOT IN
+                <foreach collection="excludePostIds" item="item" separator="," open="(" close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="keywords != null and keywords != ''">
+                AND (p.post_title LIKE CONCAT('%', #{keywords}, '%') OR
+                p.post_content LIKE CONCAT('%', #{keywords}, '%'))
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

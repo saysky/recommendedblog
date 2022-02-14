@@ -1,0 +1,109 @@
+/*------------------------------------------------------------------
+[Table of contents]
+This file include css code for widget, element in sidebar and footer
+
+- #General
+- #Search
+- #Categories
+- #Recent Post
+- #Tag
+- #Gallery
+- #Widget About
+-------------------------------------------------------------------*/
+/*------
+// Variables
+-------*/
+.swin-widget.swin-widget:not(:last-child) {
+  margin-bottom: 60px; }
+
+.swin-widget:before {
+  content: '';
+  clear: both; }
+
+.swin-widget:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+/* #Search */
+.widget-search .title-widget {
+  padding: 30px; }
+
+.widget-search form {
+  position: relative; }
+  .widget-search form input.search-input {
+    width: 100%;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 0 20px;
+    line-height: 40px; }
+  .widget-search form span.search-submit {
+    position: absolute;
+    right: 20px;
+    line-height: 40px;
+    bottom: 0; }
+
+/* #Categories */
+.widget-categories .link {
+  padding: 9px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #29272e;
+  position: relative;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease; }
+  .widget-categories .link:not(:last-child) {
+    border-bottom: 1px solid #eeeeee; }
+  .widget-categories .link i {
+    display: none; }
+  .widget-categories .link span.text {
+    text-transform: capitalize; }
+  .widget-categories .link span.badge {
+    float: right;
+    background: none;
+    color: #7c7b80; }
+  .widget-categories .link:before {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease; }
+  .widget-categories .link:hover {
+    padding-left: 15px;
+    color: #f86653; }
+    .widget-categories .link:hover .badge {
+      color: #f86653; }
+  .widget-categories .link:before {
+    content: '';
+    position: absolute;
+    background-color: #f86653;
+    width: 10px;
+    height: 1px;
+    border-radius: 50%;
+    bottom: 50%;
+    opacity: 0;
+    left: 0;
+    transition: left 0.3s ease-in-out; }
+  .widget-categories .link:hover:before {
+    opacity: 1; }
+
+/* #Tag */
+.widget-tag ul li a {
+  background-color: #eaeaea;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  font-size: 12px; }
+  .widget-tag ul li a:hover {
+    background-color: #dddddd; }
+
+/* DardMode */
+body.dark-mode .widget-search form input.search-input {
+  background-color: #4d4d4d; }
+
+body.dark-mode .widget-categories .link {
+  color: #ffffff; }
+  body.dark-mode .widget-categories .link:hover {
+    color: #f86653; }

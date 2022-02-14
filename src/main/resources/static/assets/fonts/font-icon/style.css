@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url(fonts/icomoon.eot¿wxhsxi.eoti');
+  src:  url(https://sun-themes.com/html/alay/assets/fonts/font-icon/fonts/icomoon.eot?wxhsxi#iefixx') format('embedded-opentype'),
+    url(fonts/icomoon.ttf¿wxhsxi.ttfi') format('truetype'),
+    url(fonts/icomoon.woff¿wxhsxi.woffi') format('woff'),
+    url(https://sun-themes.com/html/alay/assets/fonts/font-icon/fonts/icomoon.svg?wxhsxi#icomoonn') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="swin-icon-"], [class*=" swin-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.swin-icon-waiter:before {
+  content: "\e900";
+}
+.swin-icon-wine:before {
+  content: "\e901";
+}
+.swin-icon-browser:before {
+  content: "\e902";
+}
+.swin-icon-carrot:before {
+  content: "\e903";
+}
+.swin-icon-delivery:before {
+  content: "\e904";
+}
+.swin-icon-dinner:before {
+  content: "\e905";
+}
+.swin-icon-dinner-2:before {
+  content: "\e906";
+}
+.swin-icon-dish:before {
+  content: "\e907";
+}
+.swin-icon-fish:before {
+  content: "\e908";
+}
+.swin-icon-ice-cream:before {
+  content: "\e909";
+}
+.swin-icon-meat:before {
+  content: "\e90a";
+}
+.swin-icon-medal:before {
+  content: "\e90b";
+}
+.swin-icon-menu-1:before {
+  content: "\e90c";
+}
+.swin-icon-noodles:before {
+  content: "\e90d";
+}
+.swin-icon-open:before {
+  content: "\e90e";
+}
+.swin-icon-pasta:before {
+  content: "\e90f";
+}
+

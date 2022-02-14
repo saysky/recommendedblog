@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+[Table of contents]
+This file include css code correspond for table and mobile device
+
+- #Large Screen:            >= 1367px
+-------------------------------------------------------------------*/
+/* #Large Screen */
+@media screen and (min-width: 1367px) {
+  .open-offcanvas,
+  .close-offcanvas,
+  i.btn-open-dropdown {
+    display: none; } }
+
+/* #Only Desktop */
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+  .open-offcanvas,
+  .close-offcanvas,
+  i.btn-open-dropdown {
+    display: none; } }

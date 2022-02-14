@@ -1,0 +1,159 @@
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.font-success {
+    color: #087623;
+}
+
+.font-warning {
+    color: #8a3a12;
+}
+
+.share-box {
+    width: 250px;
+    height: 30px;
+    margin: 100px auto;
+    transform: scale(1.1);
+}
+
+.share-box > div {
+    width: 30px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+    border-radius: 4px;
+    background-size: contain;
+    margin: 0 10px;
+}
+
+#share-qrcode {
+    background-image: url(/static/front/images/wechat.png);
+}
+
+#share-sina {
+    background-image: url(/static/front/images/sina.png);
+}
+
+#share-qq {
+    background-image: url(/static/front/images/qq.png);
+}
+
+.justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.page-item.active .page-link {
+    background-color: #516af0;
+    border-color: #516af0;
+    color: #fff;
+    z-index: 1;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #2172cd;
+    border-color: #2172cd;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.active > a {
+    color: #516af0;
+    font-weight: bold;
+}
+
+.page-link {
+    color: #516af0;
+    border: none !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #2172cd;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.tt-btn-icon {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 4px 15px 5px;
+    line-height: 1;
+    height: 39px;
+}
+
+.tt-btn-icon .tt-icon {
+    fill: #666f74;
+    -webkit-transition: fill 0.2s linear;
+    transition: fill 0.2s linear;
+}
+
+.tt-btn-icon .tt-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.tt-btn-icon:hover .tt-icon {
+    fill: #2172cd;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.tt-icon svg {
+    width: 22px;
+    height: 18px;
+}
+.tt-btn-icon .tt-icon {
+    fill: #666f74;
+    -webkit-transition: fill 0.2s linear;
+    transition: fill 0.2s linear;
+}
+.tt-btn-icon .tt-icon {
+    fill: #666f74;
+    -webkit-transition: fill 0.2s linear;
+    transition: fill 0.2s linear;
+}
+.follow-box .tt-badge {
+    color: #ffffff;
+}

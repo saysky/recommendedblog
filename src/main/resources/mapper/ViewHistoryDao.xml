@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.dao.ViewHistoryDao">
+
+
+    <select id="findPostIdByLatest10" resultType="java.lang.Long">
+        SELECT DISTINCT
+            post_id
+        FROM
+            view_history
+        WHERE
+            user_id = #{userId}
+        ORDER BY
+            create_time DESC
+            LIMIT 10
+    </select>
+    <select id="findPostIdByUserId" resultType="java.lang.Long">
+        SELECT DISTINCT
+            post_id
+        FROM
+            view_history
+        WHERE
+            user_id = #{userId}
+            AND DATE_SUB(CURDATE(), INTERVAL 1 MONTH) &lt;= create_time
+        ORDER BY create_time DESC
+        LIMIT 100
+    </select>
+</mapper>
