@@ -1,3 +1,7 @@
+## 博主开发的其他博客或论坛项目全部在这里
+**[https://liuyanzhao.com/shop.html?k=博客](https://liuyanzhao.com/shop.html?k=博客)**   <br/>
+**[https://liuyanzhao.com/shop.html?k=论坛](https://liuyanzhao.com/shop.html?k=论坛)** <br/>
+- -------------------------------------------------------------------------------
 - 基于SpringBoot/SSM的极为轻量级推荐博客系统
 - 最新消息 赠送2小时讲解视频 2021-3-5
 - 预览地址：[http://recommendedblog.liuyanzhao.com](http://recommendedblog.liuyanzhao.com)
