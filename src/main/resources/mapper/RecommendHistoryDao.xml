@@ -20,4 +20,3 @@
         </where>
         order by r.create_time DESC
     </select>
-</mapper>

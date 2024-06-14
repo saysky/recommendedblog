@@ -8,4 +8,3 @@
         <result property="id" column="id" jdbcType="INTEGER"/>
     </resultMap>
 
-</mapper>

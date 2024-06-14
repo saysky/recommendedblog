@@ -25,4 +25,3 @@
         ORDER BY create_time DESC
         LIMIT 100
     </select>
-</mapper>
