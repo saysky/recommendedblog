@@ -3,11 +3,11 @@
 **[https://liuyanzhao.com/shop.html?k=论坛](https://liuyanzhao.com/shop.html?k=论坛)** <br/>
 - -------------------------------------------------------------------------------
 - 基于SpringBoot/SSM的极为轻量级推荐博客系统
-- 最新消息 赠送2小时讲解视频 2021-3-5
+- 最新消息 赠送2小时讲解视频
 - 预览地址：[http://recommendedblog.liuyanzhao.com](http://recommendedblog.liuyanzhao.com)
 - 详细介绍地址：[https://liuyanzhao.com/shop/recommendedblog.html](https://liuyanzhao.com/shop/recommendedblog.html)
 - 代码地址：https://github.com/saysky/recommendedblog 或 https://gitee.com/saysky/recommendedblog
-- 完成时间：2022年1月
+
 
 # 一、功能介绍
 - 用户注册、登录、找回密码
